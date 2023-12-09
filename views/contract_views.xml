@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- View Form -->
+    <record id='contacts_contract_view_form' model='ir.ui.view'>
+        <field name="name">contacts.contract.view.form</field>
+        <field name="model">contacts_contract.contract</field>
+        <field name="arch" type="xml">
+            <form string="Contact contract">
+                <field name="company_id" invisible="1"/>
+                <header>
+                    <button name="action_open" states="futur" type="object" string="Start Contract" class="oe_highlight"/>
+                    <button name="action_close" states="futur" type="object" string="Cancel"/>
+                    <button name="action_close" states="open,expired" type="object" string="Close Contract"/>
+                    <button name="action_draft" states="closed" type="object" string="Reset To Draft"/>
+                    <field name="state" widget="statusbar" />
+                </header>
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <button class="oe_stat_button o_res_partner_tip_opp" type="object" name="action_redirect_to_additional_contract" icon="fa-book">
+                            <field name="contract_add_count" widget="statinfo" readonly="1"/>
+                        </button>
+                    </div>
+                    <field name="active" invisible="1"/>
+                    <widget name="web_ribbon" title="Archived" bg_color="bg-danger" attrs="{'invisible': [('active', '=', True)]}"/>
+                    <div class="oe_title">
+                        <h1><field name="name" attrs="{'readonly': [('state', '!=', 'futur')]}" /></h1>
+                    </div>
+                    <group string="Information" col="2">
+                        <group>
+                            <field name="ins_ref" attrs="{'readonly': [('state', '!=', 'futur')]}" />
+                            <field name="partner_id" attrs="{'readonly': [('state', '!=', 'futur')]}" />
+                            <field name="user_id" attrs="{'readonly': [('state', '!=', 'futur')]}" />
+                            <field name="contract_part_id" attrs="{'readonly': [('state', '!=', 'futur')]}" />
+                        </group>
+                        <group>
+                            <field name="start_date" attrs="{'readonly': [('state', '!=', 'futur')]}" />
+                            <field name="expiration_date"  attrs="{'readonly': [('state', '!=', 'futur')]}" />
+                            <field name="contract_type_id" attrs="{'readonly': [('state', '!=', 'futur')]}" />
+                            <field name="contract_category_id" attrs="{'readonly': [('state', '!=', 'futur')]}" />
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Document">
+
+                            <separator string="Attachment"/>
+                            <field name="document" attrs="{'readonly': [('state', '!=', 'futur')]}" />
+
+                            <separator string="Terms and Conditions"/>
+                            <field name="notes" nolabel="1" placeholder="Write here all other information relative to this contract" />
+                            
+                        </page>
+                        <page string="Finance">
+                            <group string="Finance">
+                                <field name="amount_contract"  attrs="{'readonly': [('state', '!=', 'futur')]}"  />
+                                <field name="currency_id"  attrs="{'readonly': [('state', '!=', 'futur')]}" />
+                                <field name="payment_date" attrs="{'readonly': [('state', '!=', 'futur')]}" />      
+                            </group>
+                            <separator string="Note"/>
+                            <field name="finance_note" nolabel="1" placeholder="Write here all other information relative to this contract"/>
+                        </page>
+                        <page string="Milestones">
+                            <separator string="Milestones"/>
+                            <field name="milestones_ids" mode='tree' attrs="{'readonly': [('state', '!=', 'futur')]}" >
+                                <tree colspan="4" editable="bottom"> 
+                                    <field name="sequence" widget="handle"/>   
+                                    <field name="date"/>
+                                    <field name="name"/>
+                                </tree>
+                            </field>
+                        </page>
+                        <page string="Additional agreements">
+                            <group string="Additional">
+                                <field name="contract_relational_id" attrs="{'readonly': [('state', '!=', 'futur')]}"/>
+                            </group>
+                            <separator string="Note"/>
+                            <field name="contract_add_note" nolabel="1" placeholder="Write here all other information relative to this contract" />                                
+                        </page>
+                    </notebook>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids"/>
+                    <field name="activity_ids"/>
+                    <field name="message_ids"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <!-- View Tree -->
+    <record id='contacts_contract_view_tree' model='ir.ui.view'>
+        <field name="name">contacts.contract.view.tree</field>
+        <field name="model">contacts_contract.contract</field>
+        <field name="arch" type="xml">
+            <tree string="Contacts Contract"
+                decoration-warning="expires_today"
+                decoration-danger="days_left==0 and not expires_today"
+                decoration-muted="state=='closed'"
+                default_order="expiration_date"
+                sample="1">
+                <field name="active" invisible="1"/>
+                <field name="expires_today" invisible="1"/>
+                <field name="ins_ref" />
+                <field name="name" class="fw-bold" />
+                <field name="start_date" />
+                <field name="expiration_date" widget="remaining_days"/>
+                <field name="days_left" invisible="1"/>
+                <field name="partner_id" />
+                <field name="contract_type_id" optional="hide"/>
+                <field name="contract_category_id" optional="hide"/>
+                <field name="contract_part_id" optional="hide"/>
+                <field name="user_id" widget="many2one_avatar"/>
+                <field name="state" widget="badge" decoration-info="state == 'open'" decoration-danger="state == 'expired'" />
+                <field name="activity_exception_decoration" widget="activity_exception"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- View filter -->
+    <record id="contacts_contract_view_search" model="ir.ui.view">
+        <field name="name">contacts.contract.view.search</field>
+        <field name="model">contacts_contract.contract</field>
+        <field name="arch" type="xml">
+            <search string="Contract">
+
+                <!-- Search -->
+                <field name="name" />
+                <field name="ins_ref"/>
+                <field name="partner_id"/>
+                <field name="user_id"/>
+
+                <!-- Filter -->
+                <group>
+                    <filter name="state" string="Incoming" domain="[('state', '=', 'futur')]"/>
+                    <filter name="state" string="In Progress" domain="[('state', '=', 'open')]"/>
+                    <filter name="state" string="Expired" domain="[('state', '=', 'expired')]"/>
+                    <filter name="state" string="Closed" domain="[('state', '=', 'closed')]"/>
+                </group>
+
+
+                <!-- Group for -->
+                <group expand="8" string="Group for" colspan="12" col="10">
+                    <filter name="state" string="State" context="{'group_by':'state'}"/>
+                    <filter name="partner_id" string="Contact" context="{'group_by':'partner_id'}"/> 
+                    <filter name="user_id" string="Responsible" context="{'group_by':'user_id'}"/>
+                </group>
+                <group expand="8" string="Group for" colspan="12" col="10">
+                    <filter name="contract_relational_id" string="Relational agreements" context="{'group_by':'contract_relational_id'}"/>
+                    <filter name="contract_type_id" string="Document Type" context="{'group_by':'contract_type_id'}"/> 
+                    <filter name="contract_category_id" string="Document category" context="{'group_by':'contract_category_id'}"/> 
+                    <filter name="contract_part_id" string="Part" context="{'group_by':'contract_part_id'}"/> 
+                </group>
+
+
+            </search>
+        </field>
+    </record>
+
+</odoo>

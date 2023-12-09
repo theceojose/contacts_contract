@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+
+        <record id="contract_contract" model="contacts_contract.contract_type">
+            <field name="name">Contract</field>
+        </record>
+        <record id="contract_addendum" model="contacts_contract.contract_type">
+            <field name="name">Addendum</field>
+        </record>
+        <record id="contract_annex" model="contacts_contract.contract_type">
+            <field name="name">Annex</field>
+        </record>
+
+    </data>
+</odoo>

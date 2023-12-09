@@ -1,0 +1,7 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+
+access_contacts_contract,access_contacts_contract,model_contacts_contract_contract,,1,1,1,1
+access_contacts_contract_type,access_contacts_contract_type,model_contacts_contract_contract_type,,1,1,1,1
+access_contacts_contract_category,access_contacts_contract_category,model_contacts_contract_contract_category,,1,1,1,1
+access_contacts_contract_part,access_contacts_contract_part,model_contacts_contract_contract_part,,1,1,1,1
+access_contacts_contract_milestone,access_contacts_contract_milestone,model_contacts_contract_contract_milestone,,1,1,1,1

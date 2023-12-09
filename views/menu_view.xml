@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+   
+    <record id="action_contract" model="ir.actions.act_window">
+        <field name="name">Contract</field>
+        <field name="res_model">contacts_contract.contract</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="action_contract_type" model="ir.actions.act_window">
+        <field name="name">Contract type</field>
+        <field name="res_model">contacts_contract.contract_type</field>
+        <field name="view_mode">tree</field>        
+    </record>
+
+    <record id="action_contract_category" model="ir.actions.act_window">
+        <field name="name">Contract category</field>
+        <field name="res_model">contacts_contract.contract_category</field>
+        <field name="view_mode">tree</field>        
+    </record>
+
+    <record id="action_contract_part" model="ir.actions.act_window">
+        <field name="name">Part of contract</field>
+        <field name="res_model">contacts_contract.contract_part</field>
+        <field name="view_mode">tree</field>
+    </record>    
+
+    <menuitem name="Contracts" id="menu_contracts" sequence="21" web_icon=""/>
+        <menuitem id="menu_contacts_contract" name="Contract"  action="action_contract" parent="menu_contracts" sequence="1"/> 
+        <menuitem id="menu_contacts_contract_config" name="Configuration"  action="action_contract" parent="menu_contracts" sequence="2"/> 
+            <menuitem id="menu_contract_type" name="Contract type"  action="action_contract_type" parent="menu_contacts_contract_config" sequence="1"/> 
+            <menuitem id="menu_contract_category" name="Contract category"  action="action_contract_category" parent="menu_contacts_contract_config" sequence="2"/> 
+            <menuitem id="menu_contract_part" name="Part of contract"  action="action_contract_part" parent="menu_contacts_contract_config" sequence="3"/> 
+
+</odoo>

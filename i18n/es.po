@@ -1,0 +1,603 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* contacts_contract
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-12-03 23:14+0000\n"
+"PO-Revision-Date: 2023-12-08 20:30-0500\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.4.1\n"
+
+#. module: contacts_contract
+#: model_terms:ir.ui.view,arch_db:contacts_contract.res_partner_kanban_view_inherit
+msgid ""
+"<i class=\"fa fa-fw fa-book\" aria-label=\"Contract\" role=\"img\" title="
+"\"Contract\"/>"
+msgstr ""
+"<i class=\"fa fa-fw fa-book\" aria-label=\"Contrato\" role=\"img\" title="
+"\"Contrato\"/>"
+
+#. module: contacts_contract
+#: model:ir.model.fields,field_description:contacts_contract.field_contacts_contract_contract__message_needaction
+msgid "Action Needed"
+msgstr "Acción necesaria"
+
+#. module: contacts_contract
+#: model:ir.model.fields,field_description:contacts_contract.field_contacts_contract_contract__active
+msgid "Active"
+msgstr "Activo"
+
+#. module: contacts_contract
+#: model:ir.model.fields,field_description:contacts_contract.field_contacts_contract_contract__activity_ids
+msgid "Activities"
+msgstr "Actividades"
+
+#. module: contacts_contract
+#: model:ir.model.fields,field_description:contacts_contract.field_contacts_contract_contract__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "Decoración de excepción de actividad"
+
+#. module: contacts_contract
+#: model:ir.model.fields,field_description:contacts_contract.field_contacts_contract_contract__activity_state
+msgid "Activity State"
+msgstr "Estado de actividades"
+
+#. module: contacts_contract
+#: model:ir.model.fields,field_description:contacts_contract.field_contacts_contract_contract__activity_type_icon
+msgid "Activity Type Icon"
+msgstr "Icono de tipo de actividad"
+
+#. module: contacts_contract
+#: model_terms:ir.ui.view,arch_db:contacts_contract.contacts_contract_view_form
+msgid "Additional"
+msgstr "Adicional"
+
+#. module: contacts_contract
+#: model_terms:ir.ui.view,arch_db:contacts_contract.contacts_contract_view_form
+msgid "Additional agreements"
+msgstr "Acuerdos adicionales"
+
+#. module: contacts_contract
+#: model:ir.model.fields,field_description:contacts_contract.field_contacts_contract_contract__contract_add_count
+msgid "Additional document"
+msgstr "Documentos adicionales"
+
+#. module: contacts_contract
+#: model:res.groups,name:contacts_contract.group_admin_user
+msgid "Admin"
+msgstr "Administrador"
+
+#. module: contacts_contract
+#: model:ir.model.fields,field_description:contacts_contract.field_contacts_contract_contract__amount_contract
+msgid "Amount"
+msgstr "Monto"
+
+#. module: contacts_contract
+#: model:ir.model.fields,help:contacts_contract.field_contacts_contract_contract__amount_contract
+msgid "Amount of the document"
+msgstr "Monto del documento"
+
+#. module: contacts_contract
+#: model_terms:ir.ui.view,arch_db:contacts_contract.contacts_contract_view_form
+msgid "Archived"
+msgstr "Archivado"
+
+#. module: contacts_contract
+#: model_terms:ir.ui.view,arch_db:contacts_contract.contacts_contract_view_form
+msgid "Attachment"
+msgstr "Adjunto"
+
+#. module: contacts_contract
+#: model:ir.model.fields,field_description:contacts_contract.field_contacts_contract_contract__message_attachment_count
+msgid "Attachment Count"
+msgstr "Cantidad de adjunto"
+
+#. module: contacts_contract
+#: model_terms:ir.ui.view,arch_db:contacts_contract.contacts_contract_view_form
+msgid "Cancel"
+msgstr "Cancelado"
+
+#. module: contacts_contract
+#: model:ir.model.fields,help:contacts_contract.field_contacts_contract_contract__state
+msgid "Choose whether the document is still valid or not"
+msgstr "Selecciona cual documento es válido y no"
+
+#. module: contacts_contract
+#: model_terms:ir.ui.view,arch_db:contacts_contract.contacts_contract_view_form
+msgid "Close Contract"
+msgstr "Cerrar contrato"
+
+#. module: contacts_contract
+#: model:ir.model.fields.selection,name:contacts_contract.selection__contacts_contract_contract__state__closed
+#: model_terms:ir.ui.view,arch_db:contacts_contract.contacts_contract_view_search
+msgid "Closed"
+msgstr "Cerrado"
+
+#. module: contacts_contract
+#: model:ir.model.fields,field_description:contacts_contract.field_contacts_contract_contract__company_id
+msgid "Company"
+msgstr "Empresa"
+
+#. module: contacts_contract
+#: model:ir.ui.menu,name:contacts_contract.menu_contacts_contract_config
+msgid "Configuration"
+msgstr "Configuración"
+
+#. module: contacts_contract
+#: model:res.groups,name:contacts_contract.group_consultation_user
+msgid "Consultation"
+msgstr "Consulta"
+
+#. module: contacts_contract
+#: model:ir.model,name:contacts_contract.model_res_partner
+#: model:ir.model.fields,field_description:contacts_contract.field_contacts_contract_contract__partner_id
+#: model_terms:ir.ui.view,arch_db:contacts_contract.contacts_contract_view_search
+msgid "Contact"
+msgstr "Contacto"
+
+#. module: contacts_contract
+#: model_terms:ir.ui.view,arch_db:contacts_contract.contacts_contract_view_form
+msgid "Contact contract"
+msgstr "Contacto del contrato"
+
+#. module: contacts_contract
+#: model_terms:ir.ui.view,arch_db:contacts_contract.contacts_contract_view_tree
+msgid "Contacts Contract"
+msgstr "Contactos del contrato"
+
+#. module: contacts_contract
+#: model:ir.actions.act_window,name:contacts_contract.action_contract
+#: model:ir.model,name:contacts_contract.model_contacts_contract_contract
+#: model:ir.model.fields,field_description:contacts_contract.field_res_partner__related_contract_count
+#: model:ir.model.fields,field_description:contacts_contract.field_res_users__related_contract_count
+#: model:ir.module.category,name:contacts_contract.module_category_contract
+#: model:ir.ui.menu,name:contacts_contract.menu_contacts_contract
+#: model_terms:ir.ui.view,arch_db:contacts_contract.contacts_contract_view_search
+msgid "Contract"
+msgstr "Contrato"
+
+#. module: contacts_contract
+#: model:ir.model,name:contacts_contract.model_contacts_contract_contract_milestone
+msgid "Contract Milestone"
+msgstr "Hitos del contrato"
+
+#. module: contacts_contract
+#: model:ir.actions.act_window,name:contacts_contract.action_contract_category
+#: model:ir.model,name:contacts_contract.model_contacts_contract_contract_category
+#: model:ir.ui.menu,name:contacts_contract.menu_contract_category
+msgid "Contract category"
+msgstr "Categoría del contrato"
+
+#. module: contacts_contract
+#: model:ir.model,name:contacts_contract.model_contacts_contract_contract_part
+msgid "Contract part"
+msgstr "Parte del contrato"
+
+#. module: contacts_contract
+#: model:ir.actions.act_window,name:contacts_contract.action_contract_type
+#: model:ir.model,name:contacts_contract.model_contacts_contract_contract_type
+#: model:ir.ui.menu,name:contacts_contract.menu_contract_type
+msgid "Contract type"
+msgstr "Tipo de contrato"
+
+#. module: contacts_contract
+#: model:ir.ui.menu,name:contacts_contract.menu_contracts
+msgid "Contracts"
+msgstr "Contratos"
+
+#. module: contacts_contract
+#: model:ir.model.fields,field_description:contacts_contract.field_contacts_contract_contract__create_uid
+#: model:ir.model.fields,field_description:contacts_contract.field_contacts_contract_contract_category__create_uid
+#: model:ir.model.fields,field_description:contacts_contract.field_contacts_contract_contract_milestone__create_uid
+#: model:ir.model.fields,field_description:contacts_contract.field_contacts_contract_contract_part__create_uid
+#: model:ir.model.fields,field_description:contacts_contract.field_contacts_contract_contract_type__create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: contacts_contract
+#: model:ir.model.fields,field_description:contacts_contract.field_contacts_contract_contract__create_date
+#: model:ir.model.fields,field_description:contacts_contract.field_contacts_contract_contract_category__create_date
+#: model:ir.model.fields,field_description:contacts_contract.field_contacts_contract_contract_milestone__create_date
+#: model:ir.model.fields,field_description:contacts_contract.field_contacts_contract_contract_part__create_date
+#: model:ir.model.fields,field_description:contacts_contract.field_contacts_contract_contract_type__create_date
+msgid "Created on"
+msgstr "Creado en"
+
+#. module: contacts_contract
+#: model:ir.model.fields,field_description:contacts_contract.field_contacts_contract_contract__currency_id
+msgid "Currency"
+msgstr "Moneda"
+
+#. module: contacts_contract
+#: model:ir.model.fields,field_description:contacts_contract.field_contacts_contract_contract_milestone__date
+msgid "Date"
+msgstr "Fecha"
+
+#. module: contacts_contract
+#: model:ir.model.fields,help:contacts_contract.field_contacts_contract_contract__start_date
+msgid "Date when the coverage of the document begins"
+msgstr ""
+
+#. module: contacts_contract
+#: model:ir.model.fields,help:contacts_contract.field_contacts_contract_contract__expiration_date
+msgid ""
+"Date when the coverage of the document expirates (by default, one year "
+"after begin date)"
+msgstr ""
+
+#. module: contacts_contract
+#: model:ir.model.fields,field_description:contacts_contract.field_contacts_contract_contract_milestone__name
+msgid "Description"
+msgstr "Descripción"
+
+#. module: contacts_contract
+#: model:ir.model.fields,field_description:contacts_contract.field_contacts_contract_contract__display_name
+#: model:ir.model.fields,field_description:contacts_contract.field_contacts_contract_contract_category__display_name
+#: model:ir.model.fields,field_description:contacts_contract.field_contacts_contract_contract_milestone__display_name
+#: model:ir.model.fields,field_description:contacts_contract.field_contacts_contract_contract_part__display_name
+#: model:ir.model.fields,field_description:contacts_contract.field_contacts_contract_contract_type__display_name
+msgid "Display Name"
+msgstr "Mostrar nombre"
+
+#. module: contacts_contract
+#: model_terms:ir.ui.view,arch_db:contacts_contract.contacts_contract_view_form
+msgid "Document"
+msgstr "Documento"
+
+#. module: contacts_contract
+#: model:ir.model.fields,field_description:contacts_contract.field_contacts_contract_contract__expiration_date
+msgid "Document Expiration Date"
+msgstr "Fecha de expiración"
+
+#. module: contacts_contract
+#: model:ir.model.fields,field_description:contacts_contract.field_contacts_contract_contract__start_date
+msgid "Document Start Date"
+msgstr "Fecha de inicio"
+
+#. module: contacts_contract
+#: model:ir.model.fields,field_description:contacts_contract.field_contacts_contract_contract__contract_type_id
+#: model_terms:ir.ui.view,arch_db:contacts_contract.contacts_contract_view_search
+msgid "Document Type"
+msgstr "Tipo de documento"
+
+#. module: contacts_contract
+#: model:ir.model.fields,field_description:contacts_contract.field_contacts_contract_contract__contract_category_id
+#: model_terms:ir.ui.view,arch_db:contacts_contract.contacts_contract_view_search
+msgid "Document category"
+msgstr "Categoría del documento"
+
+#. module: contacts_contract
+#: model:ir.model.fields,field_description:contacts_contract.field_contacts_contract_contract__document
+msgid "Documents"
+msgstr "Documentos"
+
+#. module: contacts_contract
+#: model:ir.model.fields.selection,name:contacts_contract.selection__contacts_contract_contract__state__expired
+#: model_terms:ir.ui.view,arch_db:contacts_contract.contacts_contract_view_search
+msgid "Expired"
+msgstr "Vencido"
+
+#. module: contacts_contract
+#: model:ir.model.fields,field_description:contacts_contract.field_contacts_contract_contract__expires_today
+msgid "Expires Today"
+msgstr "Vence hoy"
+
+#. module: contacts_contract
+#: model_terms:ir.ui.view,arch_db:contacts_contract.contacts_contract_view_form
+msgid "Finance"
+msgstr "Finanzas"
+
+#. module: contacts_contract
+#: model:ir.model.fields,field_description:contacts_contract.field_contacts_contract_contract__message_follower_ids
+msgid "Followers"
+msgstr "Seguidores"
+
+#. module: contacts_contract
+#: model:ir.model.fields,field_description:contacts_contract.field_contacts_contract_contract__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "Seguidores (Socios)"
+
+#. module: contacts_contract
+#: model:ir.model.fields,help:contacts_contract.field_contacts_contract_contract__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr "Font awesome icon e.g. fa-tasks"
+
+#. module: contacts_contract
+#: model_terms:ir.ui.view,arch_db:contacts_contract.contacts_contract_view_search
+msgid "Group for"
+msgstr "Grupo por"
+
+#. module: contacts_contract
+#: model:ir.model.fields,field_description:contacts_contract.field_contacts_contract_contract__has_message
+msgid "Has Message"
+msgstr "Tiene mensaje"
+
+#. module: contacts_contract
+#: model:ir.model.fields,field_description:contacts_contract.field_contacts_contract_contract__id
+#: model:ir.model.fields,field_description:contacts_contract.field_contacts_contract_contract_category__id
+#: model:ir.model.fields,field_description:contacts_contract.field_contacts_contract_contract_milestone__id
+#: model:ir.model.fields,field_description:contacts_contract.field_contacts_contract_contract_part__id
+#: model:ir.model.fields,field_description:contacts_contract.field_contacts_contract_contract_type__id
+msgid "ID"
+msgstr "ID"
+
+#. module: contacts_contract
+#: model:ir.model.fields,field_description:contacts_contract.field_contacts_contract_contract__activity_exception_icon
+msgid "Icon"
+msgstr "Icono"
+
+#. module: contacts_contract
+#: model:ir.model.fields,help:contacts_contract.field_contacts_contract_contract__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "Icono que indica una excepción de actividad."
+
+#. module: contacts_contract
+#: model:ir.model.fields,help:contacts_contract.field_contacts_contract_contract__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr "Si esta marcado, un nuevo mensaje requiere de su atención."
+
+#. module: contacts_contract
+#: model:ir.model.fields,help:contacts_contract.field_contacts_contract_contract__message_has_error
+msgid "If checked, some messages have a delivery error."
+msgstr "Si esta marcado, algunos mensaje tienen un error al enviar."
+
+#. module: contacts_contract
+#: model:ir.model.fields.selection,name:contacts_contract.selection__contacts_contract_contract__state__open
+#: model_terms:ir.ui.view,arch_db:contacts_contract.contacts_contract_view_search
+msgid "In Progress"
+msgstr "Activo"
+
+#. module: contacts_contract
+#: model:ir.model.fields.selection,name:contacts_contract.selection__contacts_contract_contract__state__futur
+#: model_terms:ir.ui.view,arch_db:contacts_contract.contacts_contract_view_search
+msgid "Incoming"
+msgstr "Pendiente"
+
+#. module: contacts_contract
+#: model_terms:ir.ui.view,arch_db:contacts_contract.contacts_contract_view_form
+msgid "Information"
+msgstr "Información"
+
+#. module: contacts_contract
+#: model:ir.model.fields,field_description:contacts_contract.field_contacts_contract_contract__message_is_follower
+msgid "Is Follower"
+msgstr "Es seguidor"
+
+#. module: contacts_contract
+#: model:ir.model.fields,field_description:contacts_contract.field_contacts_contract_contract____last_update
+#: model:ir.model.fields,field_description:contacts_contract.field_contacts_contract_contract_category____last_update
+#: model:ir.model.fields,field_description:contacts_contract.field_contacts_contract_contract_milestone____last_update
+#: model:ir.model.fields,field_description:contacts_contract.field_contacts_contract_contract_part____last_update
+#: model:ir.model.fields,field_description:contacts_contract.field_contacts_contract_contract_type____last_update
+msgid "Last Modified on"
+msgstr "Última modificación en"
+
+#. module: contacts_contract
+#: model:ir.model.fields,field_description:contacts_contract.field_contacts_contract_contract__write_uid
+#: model:ir.model.fields,field_description:contacts_contract.field_contacts_contract_contract_category__write_uid
+#: model:ir.model.fields,field_description:contacts_contract.field_contacts_contract_contract_milestone__write_uid
+#: model:ir.model.fields,field_description:contacts_contract.field_contacts_contract_contract_part__write_uid
+#: model:ir.model.fields,field_description:contacts_contract.field_contacts_contract_contract_type__write_uid
+msgid "Last Updated by"
+msgstr "Última actualización el"
+
+#. module: contacts_contract
+#: model:ir.model.fields,field_description:contacts_contract.field_contacts_contract_contract__write_date
+#: model:ir.model.fields,field_description:contacts_contract.field_contacts_contract_contract_category__write_date
+#: model:ir.model.fields,field_description:contacts_contract.field_contacts_contract_contract_milestone__write_date
+#: model:ir.model.fields,field_description:contacts_contract.field_contacts_contract_contract_part__write_date
+#: model:ir.model.fields,field_description:contacts_contract.field_contacts_contract_contract_type__write_date
+msgid "Last Updated on"
+msgstr "Última actualización en"
+
+#. module: contacts_contract
+#: model:res.groups,name:contacts_contract.group_lawer_user
+msgid "Lawer"
+msgstr "Abogado"
+
+#. module: contacts_contract
+#: model:ir.model.fields,field_description:contacts_contract.field_contacts_contract_contract__message_main_attachment_id
+msgid "Main Attachment"
+msgstr ""
+
+#. module: contacts_contract
+#: model:ir.module.category,description:contacts_contract.module_category_contract
+msgid "Manage contract for contacts"
+msgstr "Gestionar contratos para contactos"
+
+#. module: contacts_contract
+#: model:ir.model.fields,field_description:contacts_contract.field_contacts_contract_contract__message_has_error
+msgid "Message Delivery error"
+msgstr "Error al entregar el mensaje"
+
+#. module: contacts_contract
+#: model:ir.model.fields,field_description:contacts_contract.field_contacts_contract_contract__message_ids
+msgid "Messages"
+msgstr "Mensajes"
+
+#. module: contacts_contract
+#: model_terms:ir.ui.view,arch_db:contacts_contract.contacts_contract_view_form
+msgid "Milestones"
+msgstr "Hitos"
+
+#. module: contacts_contract
+#: model:ir.model.fields,field_description:contacts_contract.field_contacts_contract_contract__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr "Línea de mis actividades"
+
+#. module: contacts_contract
+#: model:ir.model.fields,field_description:contacts_contract.field_contacts_contract_contract__name
+#: model:ir.model.fields,field_description:contacts_contract.field_contacts_contract_contract_category__name
+#: model:ir.model.fields,field_description:contacts_contract.field_contacts_contract_contract_part__name
+#: model:ir.model.fields,field_description:contacts_contract.field_contacts_contract_contract_type__name
+msgid "Name"
+msgstr "Nombre"
+
+#. module: contacts_contract
+#: model:ir.model.fields,field_description:contacts_contract.field_contacts_contract_contract__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "Siguiente actividad en la línea"
+
+#. module: contacts_contract
+#: model:ir.model.fields,field_description:contacts_contract.field_contacts_contract_contract__activity_summary
+msgid "Next Activity Summary"
+msgstr "Siguiente actividad programada"
+
+#. module: contacts_contract
+#: model:ir.model.fields,field_description:contacts_contract.field_contacts_contract_contract__activity_type_id
+msgid "Next Activity Type"
+msgstr "Siguiente tipo de actividad"
+
+#. module: contacts_contract
+#: model:ir.model.fields,field_description:contacts_contract.field_contacts_contract_contract__contract_add_note
+#: model:ir.model.fields,field_description:contacts_contract.field_contacts_contract_contract__finance_note
+#: model_terms:ir.ui.view,arch_db:contacts_contract.contacts_contract_view_form
+msgid "Note"
+msgstr "Nota"
+
+#. module: contacts_contract
+#: model:ir.model.fields,field_description:contacts_contract.field_contacts_contract_contract__message_needaction_counter
+msgid "Number of Actions"
+msgstr "Número de acciones"
+
+#. module: contacts_contract
+#: model:ir.model.fields,field_description:contacts_contract.field_contacts_contract_contract__message_has_error_counter
+msgid "Number of errors"
+msgstr "Número de errores"
+
+#. module: contacts_contract
+#: model:ir.model.fields,help:contacts_contract.field_contacts_contract_contract__message_needaction_counter
+msgid "Number of messages requiring action"
+msgstr "Número de mensajes requeridos para la acción"
+
+#. module: contacts_contract
+#: model:ir.model.fields,help:contacts_contract.field_contacts_contract_contract__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "Número de mensajes con error de entrega"
+
+#. module: contacts_contract
+#: model:ir.model.fields,field_description:contacts_contract.field_contacts_contract_contract__contract_part_id
+#: model_terms:ir.ui.view,arch_db:contacts_contract.contacts_contract_view_search
+msgid "Part"
+msgstr "Parte"
+
+#. module: contacts_contract
+#: model:ir.actions.act_window,name:contacts_contract.action_contract_part
+#: model:ir.ui.menu,name:contacts_contract.menu_contract_part
+msgid "Part of contract"
+msgstr "Parte del contrato"
+
+#. module: contacts_contract
+#: model:ir.model.fields,field_description:contacts_contract.field_contacts_contract_contract__payment_date
+msgid "Payment Date"
+msgstr "Fecha de pago"
+
+#. module: contacts_contract
+#: model:ir.model.fields,field_description:contacts_contract.field_contacts_contract_contract__ins_ref
+msgid "Reference"
+msgstr "Referencia"
+
+#. module: contacts_contract
+#: model:ir.model.fields,field_description:contacts_contract.field_contacts_contract_contract__contract_relational_id
+#: model_terms:ir.ui.view,arch_db:contacts_contract.contacts_contract_view_search
+msgid "Relational agreements"
+msgstr "Acuerdos relacionados"
+
+#. module: contacts_contract
+#: model_terms:ir.ui.view,arch_db:contacts_contract.contacts_contract_view_form
+msgid "Reset To Draft"
+msgstr "Reiniciar a borrador"
+
+#. module: contacts_contract
+#: model:ir.model.fields,field_description:contacts_contract.field_contacts_contract_contract__user_id
+#: model_terms:ir.ui.view,arch_db:contacts_contract.contacts_contract_view_search
+msgid "Responsible"
+msgstr "Responsable"
+
+#. module: contacts_contract
+#: model:ir.model.fields,field_description:contacts_contract.field_contacts_contract_contract__activity_user_id
+msgid "Responsible User"
+msgstr "Usuario responsable"
+
+#. module: contacts_contract
+#: model:ir.model.fields,help:contacts_contract.field_contacts_contract_contract__user_id
+msgid "Responsible for the document"
+msgstr "Responsable del documento"
+
+#. module: contacts_contract
+#: model:ir.model.fields,field_description:contacts_contract.field_contacts_contract_contract_milestone__sequence
+msgid "Sequence"
+msgstr "Sequencia"
+
+#. module: contacts_contract
+#: model_terms:ir.ui.view,arch_db:contacts_contract.contacts_contract_view_form
+msgid "Start Contract"
+msgstr "Iniciar contrato"
+
+#. module: contacts_contract
+#: model_terms:ir.ui.view,arch_db:contacts_contract.contacts_contract_view_search
+msgid "State"
+msgstr "Estado"
+
+#. module: contacts_contract
+#: model:ir.model.fields,field_description:contacts_contract.field_contacts_contract_contract__state
+msgid "Status"
+msgstr "Estado"
+
+#. module: contacts_contract
+#: model:ir.model.fields,help:contacts_contract.field_contacts_contract_contract__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"Estado basado en activades\n"
+"Overdue: Due date is already passed\n"
+"Hoy: Actividad para hoy\n"
+"Planeado: Actividad futura."
+
+#. module: contacts_contract
+#: model:ir.model.fields,field_description:contacts_contract.field_contacts_contract_contract__notes
+#: model_terms:ir.ui.view,arch_db:contacts_contract.contacts_contract_view_form
+msgid "Terms and Conditions"
+msgstr "Términos y condiciones"
+
+#. module: contacts_contract
+#: model:ir.model.constraint,message:contacts_contract.constraint_contacts_contract_contract_ins_ref_uniq
+msgid "The are other document with this Reference"
+msgstr "Hay otro documento con esta referencia"
+
+#. module: contacts_contract
+#: model:ir.model.fields,help:contacts_contract.field_contacts_contract_contract__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "Tipo de excepción en el historial de actividades."
+
+#. module: contacts_contract
+#: model:ir.model.fields,field_description:contacts_contract.field_contacts_contract_contract__days_left
+msgid "Warning Date"
+msgstr "Fecha de alerta"
+
+#. module: contacts_contract
+#: model_terms:ir.ui.view,arch_db:contacts_contract.contacts_contract_view_form
+msgid "Write here all other information relative to this contract"
+msgstr "Escribe aquí otra información de este contrato"
+
+#. module: contacts_contract
+#: model:ir.model.fields,field_description:contacts_contract.field_contacts_contract_contract_milestone__contract_id
+msgid "contract"
+msgstr "contrato"
+
+#. module: contacts_contract
+#: model:ir.model.fields,field_description:contacts_contract.field_contacts_contract_contract__milestones_ids
+msgid "milestones"
+msgstr "hitos"
