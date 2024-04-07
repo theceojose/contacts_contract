@@ -23,11 +23,11 @@
                     <field name="active" invisible="1"/>
                     <widget name="web_ribbon" title="Archived" bg_color="bg-danger" attrs="{'invisible': [('active', '=', True)]}"/>
                     <div class="oe_title">
-                        <h1><field name="name" attrs="{'readonly': [('state', '!=', 'futur')]}" /></h1>
+                        <h1><field name="name" attrs="{'readonly': [('state', '!=', 'futur')]}" required="1" /></h1>
                     </div>
                     <group string="Information" col="2">
                         <group>
-                            <field name="ins_ref" attrs="{'readonly': [('state', '!=', 'futur')]}" />
+                            <field name="ins_ref" attrs="{'readonly': [('state', '!=', 'futur')]}" required="1" />
                             <field name="partner_id" attrs="{'readonly': [('state', '!=', 'futur')]}" />
                             <field name="user_id" attrs="{'readonly': [('state', '!=', 'futur')]}" />
                             <field name="contract_part_id" attrs="{'readonly': [('state', '!=', 'futur')]}" />

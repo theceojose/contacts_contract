@@ -13,7 +13,7 @@ class Contract(models.Model):
         return fields.Date.to_string(start_date + oneyear)
 
     company_id = fields.Many2one('res.company', 'Company', default=lambda self: self.env.company)
-    name = fields.Char(string='Name', compute='_compute_contract_name', store=True, required=True)
+    name = fields.Char(string='Name', copy=False)
     active = fields.Boolean(default=True)
     user_id = fields.Many2one('res.users', 'Responsible', default=lambda self: self.env.user, index=True, help='Responsible for the document', required=True)
     start_date = fields.Date(
@@ -26,7 +26,7 @@ class Contract(models.Model):
     days_left = fields.Integer(compute='_compute_days_left', string='Warning Date')
     expires_today = fields.Boolean(compute='_compute_days_left')
     partner_id = fields.Many2one('res.partner', 'Contact', required=True)
-    ins_ref = fields.Char('Reference', size=64, copy=False, required=True)
+    ins_ref = fields.Char('Reference', size=64, copy=False)
     state = fields.Selection(
         [('futur', 'Incoming'),
          ('open', 'In Progress'),
@@ -52,6 +52,7 @@ class Contract(models.Model):
     contract_add_count = fields.Integer(string='Additional document', compute='_compute_additional_contract_count')
 
     _sql_constraints = [("ins_ref_uniq", "unique(ins_ref)", "The are other document with this Reference")]
+    _sql_constraints = [("name_uniq", "unique(name)", "The are other document with this Name")]
 
     @api.depends('expiration_date', 'state')
     def _compute_days_left(self):

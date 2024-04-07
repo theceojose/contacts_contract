@@ -578,6 +578,11 @@ msgid "The are other document with this Reference"
 msgstr "Hay otro documento con esta referencia"
 
 #. module: contacts_contract
+#: model:ir.model.constraint,message:contacts_contract.constraint_contacts_contract_contract_name_uniq
+msgid "The are other document with this Name"
+msgstr "Hay otro documento con ese nombre"
+
+#. module: contacts_contract
 #: model:ir.model.fields,help:contacts_contract.field_contacts_contract_contract__activity_exception_decoration
 msgid "Type of the exception activity on record."
 msgstr "Tipo de excepción en el historial de actividades."
