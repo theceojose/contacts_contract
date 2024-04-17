@@ -6,7 +6,7 @@
     'author': "José Luis Hernández Ricardo",
     'website': "https://github.com/theceojose/",
     'category': 'Productivity',
-    'version': '16.0',
+    'version': '17.0',
     'depends': ['contacts'],
     'data': [
         'security/contract_security.xml',

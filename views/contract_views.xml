@@ -8,10 +8,10 @@
             <form string="Contact contract">
                 <field name="company_id" invisible="1"/>
                 <header>
-                    <button name="action_open" states="futur" type="object" string="Start Contract" class="oe_highlight" groups="contacts_contract.group_admin_user" />
-                    <button name="action_close" states="futur" type="object" string="Cancel" groups="contacts_contract.group_admin_user" />
-                    <button name="action_close" states="open,expired" type="object" string="Close Contract" groups="contacts_contract.group_admin_user" />
-                    <button name="action_draft" states="closed" type="object" string="Reset To Draft" groups="contacts_contract.group_admin_user" />
+                    <button name="action_open" invisible="state != 'futur'" type="object" string="Start Contract" class="oe_highlight" groups="contacts_contract.group_admin_user" />
+                    <button name="action_close" invisible="state != 'futur'" type="object" string="Cancel" groups="contacts_contract.group_admin_user" />
+                    <button name="action_close" invisible="state == 'futur' or state == 'closed'" type="object" string="Close Contract" groups="contacts_contract.group_admin_user" />
+                    <button name="action_draft" invisible="state != 'closed'" type="object" string="Reset To Draft" groups="contacts_contract.group_admin_user" />
                     <field name="state" widget="statusbar" />
                 </header>
                 <sheet>
@@ -21,29 +21,29 @@
                         </button>
                     </div>
                     <field name="active" invisible="1"/>
-                    <widget name="web_ribbon" title="Archived" bg_color="bg-danger" attrs="{'invisible': [('active', '=', True)]}"/>
+                    <widget name="web_ribbon" title="Archived" bg_color="bg-danger" invisible='active'/>
                     <div class="oe_title">
-                        <h1><field name="name" attrs="{'readonly': [('state', '!=', 'futur')]}" required="1" /></h1>
+                        <h1><field name="name" readonly="state != 'futur'" required="1" /></h1>
                     </div>
                     <group string="Information" col="2">
                         <group>
-                            <field name="ins_ref" attrs="{'readonly': [('state', '!=', 'futur')]}" required="1" />
-                            <field name="partner_id" attrs="{'readonly': [('state', '!=', 'futur')]}" />
-                            <field name="user_id" attrs="{'readonly': [('state', '!=', 'futur')]}" />
-                            <field name="contract_part_id" attrs="{'readonly': [('state', '!=', 'futur')]}" />
+                            <field name="ins_ref" readonly="state != 'futur'" required="1" />
+                            <field name="partner_id" readonly="state != 'futur'" />
+                            <field name="user_id" readonly="state != 'futur'" />
+                            <field name="contract_part_id" readonly="state != 'futur'" />
                         </group>
                         <group>
-                            <field name="start_date" attrs="{'readonly': [('state', '!=', 'futur')]}" />
-                            <field name="expiration_date"  attrs="{'readonly': [('state', '!=', 'futur')]}" />
-                            <field name="contract_type_id" attrs="{'readonly': [('state', '!=', 'futur')]}" />
-                            <field name="contract_category_id" attrs="{'readonly': [('state', '!=', 'futur')]}" />
+                            <field name="start_date" readonly="state != 'futur'" />
+                            <field name="expiration_date"  readonly="state != 'futur'" />
+                            <field name="contract_type_id" readonly="state != 'futur'" />
+                            <field name="contract_category_id" readonly="state != 'futur'" />
                         </group>
                     </group>
                     <notebook>
                         <page string="Document">
 
                             <separator string="Attachment"/>
-                            <field name="document" attrs="{'readonly': [('state', '!=', 'futur')]}" />
+                            <field name="document" readonly="state != 'futur'" />
 
                             <separator string="Terms and Conditions"/>
                             <field name="notes" nolabel="1" placeholder="Write here all other information relative to this contract" />
@@ -51,16 +51,16 @@
                         </page>
                         <page string="Finance">
                             <group string="Finance">
-                                <field name="amount_contract"  attrs="{'readonly': [('state', '!=', 'futur')]}"  />
-                                <field name="currency_id"  attrs="{'readonly': [('state', '!=', 'futur')]}" />
-                                <field name="payment_date" attrs="{'readonly': [('state', '!=', 'futur')]}" />      
+                                <field name="amount_contract"  readonly="state != 'futur'"  />
+                                <field name="currency_id"  readonly="state != 'futur'" />
+                                <field name="payment_date" readonly="state != 'futur'" />      
                             </group>
                             <separator string="Note"/>
                             <field name="finance_note" nolabel="1" placeholder="Write here all other information relative to this contract"/>
                         </page>
                         <page string="Milestones">
                             <separator string="Milestones"/>
-                            <field name="milestones_ids" mode='tree' attrs="{'readonly': [('state', '!=', 'futur')]}" >
+                            <field name="milestones_ids" mode='tree' readonly="state != 'futur'" >
                                 <tree colspan="4" editable="bottom"> 
                                     <field name="sequence" widget="handle"/>   
                                     <field name="date"/>
@@ -70,7 +70,7 @@
                         </page>
                         <page string="Additional agreements">
                             <group string="Additional">
-                                <field name="contract_relational_id" attrs="{'readonly': [('state', '!=', 'futur')]}"/>
+                                <field name="contract_relational_id" readonly="state != 'futur'"/>
                             </group>
                             <separator string="Note"/>
                             <field name="contract_add_note" nolabel="1" placeholder="Write here all other information relative to this contract" />                                
@@ -97,13 +97,13 @@
                 decoration-muted="state=='closed'"
                 default_order="expiration_date"
                 sample="1">
-                <field name="active" invisible="1"/>
-                <field name="expires_today" invisible="1"/>
+                <field name="active" column_invisible="True"/>
+                <field name="expires_today" column_invisible="True"/>
                 <field name="ins_ref" />
                 <field name="name" class="fw-bold" />
                 <field name="start_date" />
                 <field name="expiration_date" widget="remaining_days"/>
-                <field name="days_left" invisible="1"/>
+                <field name="days_left" column_invisible="True"/>
                 <field name="partner_id" />
                 <field name="contract_type_id" optional="hide"/>
                 <field name="contract_category_id" optional="hide"/>

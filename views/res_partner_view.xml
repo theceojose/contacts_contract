@@ -21,7 +21,7 @@
         <field name="model">res.partner</field>
         <field name="inherit_id" ref="base.res_partner_kanban_view"/>
         <field name="arch" type="xml">
-            <xpath expr="//span[hasclass('oe_kanban_partner_links')]" position="inside">
+            <xpath expr="//div[hasclass('oe_kanban_bottom_left')]" position="inside">
                 <a t-if="record.related_contract_count.value>0" href="#" data-type="object" data-name="action_redirect_to_contract" class="oe_kanban_action oe_kanban_action_a me-1" >
                     <span class="badge rounded-pill">
                         <i class="fa fa-fw fa-book" aria-label="Contract" role="img" title="Contract"/>
