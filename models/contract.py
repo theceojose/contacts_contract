@@ -1,4 +1,4 @@
-from odoo import _, api, fields, models
+from odoo import _, api, fields, models, exceptions
 from dateutil.relativedelta import relativedelta
 
 class Contract(models.Model):
@@ -6,6 +6,7 @@ class Contract(models.Model):
     _description = 'Contract'
     _inherit = ['mail.thread', 'mail.activity.mixin']
     _order = 'state desc,expiration_date'
+    _check_company_auto = True
     
     def compute_next_year_date(self, strdate):
         oneyear = relativedelta(years=1)
@@ -51,8 +52,13 @@ class Contract(models.Model):
 
     contract_add_count = fields.Integer(string='Additional document', compute='_compute_additional_contract_count')
 
-    _sql_constraints = [("ins_ref_uniq", "unique(ins_ref)", "The are other document with this Reference")]
-    _sql_constraints = [("name_uniq", "unique(name)", "The are other document with this Name")]
+    @api.constrains('ins_ref', 'name')
+    def _check_contra(self):
+        for rec in self:
+            if self.search_count([('ins_ref', '=', rec.ins_ref)]) > 1:
+                raise exceptions.ValidationError('The are other document with this Reference')
+            if self.search_count([('name', '=', rec.name)]) > 1:
+                raise exceptions.ValidationError('The are other document with this Name')
 
     @api.depends('expiration_date', 'state')
     def _compute_days_left(self):
