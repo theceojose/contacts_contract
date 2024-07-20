@@ -39,18 +39,9 @@
                             <field name="contract_category_id" attrs="{'readonly': [('state', '!=', 'futur')]}" />
                         </group>
                     </group>
-                    <notebook>
-                        <page string="Document">
-
-                            <separator string="Attachment"/>
-                            <field name="document" attrs="{'readonly': [('state', '!=', 'futur')]}" />
-
-                            <separator string="Terms and Conditions"/>
-                            <field name="notes" nolabel="1" placeholder="Write here all other information relative to this contract" />
-                            
-                        </page>
-                        <page string="Finance">
-                            <group string="Finance">
+                    <notebook>                      
+                        <page string="Finance" name="finance">
+                            <group string="Finance" name="gpfinance">
                                 <field name="amount_contract"  attrs="{'readonly': [('state', '!=', 'futur')]}"  />
                                 <field name="currency_id"  attrs="{'readonly': [('state', '!=', 'futur')]}" />
                                 <field name="payment_date" attrs="{'readonly': [('state', '!=', 'futur')]}" />      
@@ -58,7 +49,7 @@
                             <separator string="Note"/>
                             <field name="finance_note" nolabel="1" placeholder="Write here all other information relative to this contract"/>
                         </page>
-                        <page string="Milestones">
+                        <page string="Milestones" name="milestone">
                             <separator string="Milestones"/>
                             <field name="milestones_ids" mode='tree' attrs="{'readonly': [('state', '!=', 'futur')]}" >
                                 <tree colspan="4" editable="bottom"> 
@@ -68,7 +59,16 @@
                                 </tree>
                             </field>
                         </page>
-                        <page string="Additional agreements">
+                        <page string="Document" name="documents">
+
+                            <separator string="Attachment"/>
+                            <field name="document" attrs="{'readonly': [('state', '!=', 'futur')]}" />
+
+                            <separator string="Terms and Conditions"/>
+                            <field name="notes" nolabel="1" placeholder="Write here all other information relative to this contract" />
+                            
+                        </page>
+                        <page string="Additional agreements" name="agreement">
                             <group string="Additional">
                                 <field name="contract_relational_id" attrs="{'readonly': [('state', '!=', 'futur')]}"/>
                             </group>
