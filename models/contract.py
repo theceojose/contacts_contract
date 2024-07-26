@@ -112,7 +112,7 @@ class Contract(models.Model):
     @api.model
     def scheduler_manage_contract_expiration(self):
         # This method is called by a cron task
-        # It manages the state of a contract, possibly by posting a message on the vehicle concerned and updating its status
+        # It manages the state of a contract, possibly by posting a message on the contract concerned and updating its status
         params = self.env['ir.config_parameter'].sudo()
         delay_alert_contract = int(params.get_param('contacts_contract.delay_alert_contract', default=30))
         date_today = fields.Date.from_string(fields.Date.today())

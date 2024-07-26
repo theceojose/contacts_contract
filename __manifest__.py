@@ -14,6 +14,8 @@
         'data/contract_type_data.xml',
         'data/contract_category_data.xml',
         'data/contract_part_data.xml',
+        'data/cron_data.xml',
+        'data/mail_activity_type_data.xml',
         'views/menu_view.xml',
         'views/contract_views.xml',
         'views/res_partner_view.xml',

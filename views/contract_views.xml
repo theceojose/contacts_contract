@@ -103,6 +103,7 @@
                 <field name="name" class="fw-bold" />
                 <field name="start_date" />
                 <field name="expiration_date" widget="remaining_days"/>
+                <field name="activity_ids" widget="list_activity" optional="show"/>
                 <field name="days_left" invisible="1"/>
                 <field name="partner_id" />
                 <field name="contract_type_id" optional="hide"/>
